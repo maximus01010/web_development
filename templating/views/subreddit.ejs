@@ -1,0 +1,16 @@
+<%-include('partials/head')%>
+    <%-include('partials/navbar')%>
+      <div class="container">
+    <h1><%= name %></h1>
+    <h2><%=description %></h2>
+    <p>subscribers=<%=subscribers %></p>
+    <%for(let post of posts){%>
+        <p><%=post.title%>-<b><%=post.author%></b></p>
+        <%if(post.img){%>
+            <img src="<%=post.img%>" alt="">
+        <%}%>
+    <%}%>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</div>
+<%-include('partials/footer')%>

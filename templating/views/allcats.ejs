@@ -1,0 +1,9 @@
+<%-include('partials/head')%>
+    <%-include('partials/navbar')%>
+    <h1>all cats</h1>
+    <%for(let cat of cats){%>
+        <ul>
+            <li><%=cat%></li>
+    </ul>
+    <%}%>
+    <%-include('partials/footer')%>

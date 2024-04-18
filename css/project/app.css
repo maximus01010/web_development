@@ -1,0 +1,139 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*above code is for to reset the css in default browser */
+html{
+    /*used for restricting the size of box as we wished when we chnge the padding or anything the overall box ize remains same*/
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+body{
+    box-sizing: border-box;
+    background-color: #60a9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.panel{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    /*15 is for top and bottom 25 is for left and right*/
+    width: 100%;
+    /*max width it can go is 960px*/
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+.pricing-plan{
+    border-bottom: 1px solid grey;
+}
+.pricing-plan:last-child{
+    border-bottom:none;
+}
+.pricing-img{
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+.pricing-header{
+    color:green;
+    letter-spacing: 1px;
+}
+.pricing-features{
+    margin: 50px 0 25px;
+    /*top-50 bottom-25 left,right-0*/
+    color: blue;
+}
+.pricing-features-item{
+    color:green;
+    letter-spacing: 1px;
+    border-top: 1px solid black;
+    line-height: 1.5;
+    padding: 15px 0;
+    
+}
+.pricing-features-item:last-child{
+    border-bottom: 1px solid black;
+}
+.pricing-price{
+    color: blue;
+    font-size: 32px;
+    font-weight: 700px;
+    display: block;
+    /*it is used to show that in a sigle line likea column*/
+}
+.pricing-button{
+    border: 1px solid pink;
+    border-radius: 10px;
+    color: blue;
+    display: inline-block;
+    /*very useful*/
+    padding: 15px 35px;
+    margin: 25px 0;
+}
+.pricing-button:hover,.pricing-button:focus{
+    background-color: red;
+}
+@media (min-width: 900px){
+    .panel {
+      flex-direction: row;
+    }
+    .pricing-plan {
+      border-bottom: none;
+      border-right: 1px solid #e1f1ff;
+      padding: 25px 50px;
+    }
+    .pricing-plan:last-child {
+      border-right: none;
+    }
+  }
